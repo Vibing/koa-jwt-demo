@@ -4,7 +4,7 @@ import UserEntity from '../entity/User';
 import * as crypto from 'crypto';
 import secret from '../config/secret';
 
-/* 通过payload生成token, 有效时间1小时*/
+/* 通过payload生成token,有效时间1小时*/
 const getToken = (payload = {}) =>
   jwt.sign(payload, secret.sign, { expiresIn: '1h' });
 
